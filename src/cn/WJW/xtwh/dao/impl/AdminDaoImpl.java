@@ -20,9 +20,6 @@ import java.util.List;
 public class AdminDaoImpl implements AdminDao {
 
 
-
-
-
     @Override
     public Admin login(Admin admin) throws SQLException {
         // 1 : 声明QueryRunner对象
@@ -36,7 +33,7 @@ public class AdminDaoImpl implements AdminDao {
     @Override
     public List<Admin> queryAll() throws Exception{
         QueryRunner runner = new QueryRunner(DSUtils.getDataSource());
-        String sql = "select * from admin";
+        String sql = "select * from user";
         List<Admin> adminList = runner.query(sql, new BeanListHandler<Admin>(Admin.class));
         return adminList;
     }

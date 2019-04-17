@@ -1,9 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: hp
+  Date: 2019/4/17
+  Time: 13:20
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Home</title>
     <!-- Custom Theme files -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style-re.css" rel="stylesheet" type="text/css" media="all"/>
     <!-- Custom Theme files -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,20 +23,22 @@
 </head>
 <body>
 <div class="login">
-    <h2>登陆界面</h2>
+    <h2>注册界面</h2>
     <div class="login-top">
-        <h1>登陆</h1>
+        <h1>注册</h1>
         <form action="<%=request.getContextPath()%>/admin" method="post">
             <input name="name" type="text" value="User Id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
             <input name="password" type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
+            <input name="Phone" type="int"  value="电话号码">
+            <input name="realname" type="text" value="姓名">
         </form>
         <div class="forgot">
-            <a href="#">忘记密码</a>
-            <input type="submit" value="登陆" >
+
+            <input type="submit" value="注册" >
         </div>
     </div>
     <div class="login-bottom">
-        <h3>新用户 &nbsp;<a href="#">注册</a>&nbsp 这里</h3>
+
     </div>
 </div>
 <div class="copyright">
